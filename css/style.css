@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:wght@200;300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Newsreader', serif;
+  font-weight: 500;
+}
+
+.todo-wrapper {
+  background-image: -webkit-gradient(linear, left top, right top, from(#A83279), to(#D38312));
+  background-image: linear-gradient(to right, #A83279, #D38312);
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.todo-wrapper .todo-header {
+  text-transform: capitalize;
+}
+
+.todo-wrapper .check-all-wrapper {
+  width: 30%;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer !important;
+}
+
+.todo-wrapper .check-all-wrapper .complete-delete-all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 95%;
+  font-size: 28px;
+  margin-left: 10px;
+}
+
+.todo-wrapper .check-all-wrapper .complete-delete-all .fa {
+  margin-left: 15px;
+  color: white;
+}
+
+.todo-wrapper .check-all-wrapper .check-all {
+  position: absolute;
+  right: 100%;
+  width: 5%;
+}
+
+.todo-wrapper .check-all-wrapper input {
+  opacity: initial;
+}
+
+.todo-wrapper .input-wrapper {
+  width: 650px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.todo-wrapper .input-wrapper .input-field {
+  width: 80%;
+}
+
+.todo-wrapper .input-wrapper .add-task-btn {
+  width: 20%;
+  text-transform: uppercase;
+}
+
+.todo-wrapper .task-list-wrapper {
+  width: 650px;
+}
+
+.todo-wrapper .task-list-wrapper .uncompleted-tasks-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 55px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.todo-wrapper .task-list-wrapper .completed-tasks-wrapper {
+  width: 100%;
+  margin-top: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 55px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.todo-wrapper .task-list-wrapper .completed-tasks-wrapper .completedTasks .task-item {
+  position: relative;
+  background-color: #888 !important;
+  color: #fff;
+  -webkit-transition: ease-in-out .2s;
+  transition: ease-in-out .2s;
+  -webkit-text-decoration: line-through red;
+          text-decoration: line-through red;
+  -webkit-text-decoration-style: double;
+          text-decoration-style: double;
+}
+
+.todo-wrapper .task-list-wrapper .completed-tasks-wrapper .completedTasks .task-item .editBtn {
+  display: none;
+}
+
+.todo-wrapper .task-list-wrapper .tasktype {
+  text-transform: capitalize;
+}
+
+.todo-wrapper .task-list-wrapper .task-list {
+  margin-right: 0;
+}
+
+.todo-wrapper .task-list-wrapper .task-list .task-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.todo-wrapper .task-list-wrapper .task-list .task-item .absolute {
+  position: absolute;
+  height: 100%;
+}
+
+.todo-wrapper .task-list-wrapper .task-list .task-item .close-btn {
+  right: 10px;
+}
+
+.todo-wrapper .task-list-wrapper .task-list .task-item .check-btn {
+  position: absolute;
+  left: -20px;
+  bottom: 15px;
+  opacity: initial;
+}
+
+.todo-wrapper .task-list-wrapper .task-list .task-item .editBtn {
+  right: 97px;
+}
+
+.todo-wrapper .task-list-wrapper .task-list .task-item .check {
+  right: 45px;
+}
+
+.todo-wrapper .task-list-wrapper .task-list .task-item .fa {
+  pointer-events: none;
+}
+
+.todo-wrapper .task-list-wrapper .task-list .task-item .edit-pressed {
+  color: #eb8034;
+}
+
+.todo-wrapper .task-list-wrapper .task-list .task-item .disable {
+  pointer-events: none;
+}
+
+.todo-wrapper .task-list-wrapper .task-list .task-item .item_input {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 350px;
+}
+
+.todo-wrapper .task-list-wrapper .task-list .task-item .show {
+  display: block;
+}
+/*# sourceMappingURL=style.css.map */

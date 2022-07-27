@@ -1,0 +1,173 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:wght@200;300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Newsreader', serif;
+    font-weight: 500;
+}
+
+
+.todo-wrapper {
+    background-image: linear-gradient(to right, #A83279 , #D38312);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    position: absolute;
+    
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    .todo-header {
+        text-transform: capitalize;
+    }
+
+    .check-all-wrapper {
+        width: 30%;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .complete-delete-all {
+            display: flex;
+            justify-content: flex-end;
+            width: 95%;
+            font-size: 28px;
+            margin-left: 10px;
+
+            .fa {
+                margin-left: 15px;
+                color: white;
+            }
+        }
+            .check-all {
+                position: absolute;
+                right: 100%;
+                width: 5%;
+            }
+            input {
+                
+                opacity: initial;
+            }
+        cursor: pointer!important;
+            
+    }
+    .input-wrapper {
+        width: 650px;
+        display: flex;
+        justify-content: center;
+        .input-field {
+            width: 80%;
+        }
+        .add-task-btn {
+            width: 20%;
+            text-transform: uppercase;
+        }
+    }
+
+
+    .task-list-wrapper {
+        
+        width: 650px;
+        .uncompleted-tasks-wrapper {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 55px;
+            align-items: center;
+        }
+        .completed-tasks-wrapper {
+            width: 100%;
+            margin-top: 55px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 55px;
+            align-items: center;
+            .completedTasks {
+                .task-item {
+                position: relative;
+                background-color: #888!important;
+                color: #fff;
+                transition: ease-in-out .2s;
+                text-decoration: line-through red;
+                text-decoration-style: double;
+                .editBtn {
+                    display: none;
+                }
+                }
+            }
+        }
+
+        .tasktype {
+            text-transform: capitalize;
+        }
+
+        
+        .task-list {
+          
+            margin-right: 0;
+            
+            .task-item {
+                
+                display: flex;
+                
+                .absolute {
+                    position: absolute;
+                    height: 100%;
+                    
+                }
+
+                .close-btn {
+                    right: 10px;
+                }
+
+                .check-btn {
+                    position: absolute;
+                    left: -20px;
+                    bottom: 15px;
+                    opacity: initial;
+                }
+                .editBtn {
+                    right: 97px;
+                }
+
+                .check {
+                    right: 45px;
+                }
+                .fa {
+                    pointer-events: none;
+                }
+    
+                .edit-pressed {
+                    color: #eb8034;
+                    
+                }
+                .disable {
+                    pointer-events: none;
+                }
+                
+                .item_input {
+                    position: absolute;
+                    display: none;
+                    top: 0;
+                    left: 0;
+                    width: 350px;
+    
+                }
+    
+                .show {
+                    display: block;
+                }
+            }
+        }
+    }
+ }
