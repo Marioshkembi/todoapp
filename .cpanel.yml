@@ -1,5 +1,0 @@
----
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home/marilszh/todoapp.marioshkembi.com/
-    - /bin/cp -a * $DEPLOYPATH
